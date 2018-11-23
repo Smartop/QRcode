@@ -24,6 +24,7 @@ class CreateQrcodesTable extends Migration
             $table->string('qrcode_path')->nullable(); // path to QRCode image was save
             $table->tinyInteger('status');
             $table->float('amount', 10, 4);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
