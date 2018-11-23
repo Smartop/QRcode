@@ -17,4 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
+
+Route::resource('qrcodes', 'QrcodeController');
+
+Route::resource('transactions', 'TransactionController');
+
+Route::resource('roles', 'RoleController');
+
+Route::resource('users', 'UserController');
